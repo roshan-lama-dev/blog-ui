@@ -1,3 +1,59 @@
 .post {
   flex: 9;
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 90px;
+}
+.blogPost {
+  box-shadow: 0.5rem 0.5rem black, -0.5rem -0.5rem #ccc;
+  border-radius: 5px;
+  width: 385px;
+  margin: 0px 20px 30px 20px;
+}
+.postImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.postInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+}
+
+.postCats {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.postTitle {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.postDate {
+  font-size: 12px;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.postDesc {
+  padding: 10px;
+  font-size: 16px;
+  line-height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  /* margin-top: 15px; */
 }
