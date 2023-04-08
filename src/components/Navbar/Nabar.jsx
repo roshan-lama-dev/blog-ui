@@ -1,19 +1,44 @@
 import React from "react";
 import "./navbar.css";
+import { Link } from "react-router-dom";
 export const Nabar = () => {
   return (
     <div className="navbarContainer">
       <div className="leftNavbar">
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-square-github"></i>
+        <i className="leftIcon fa-brands fa-linkedin"></i>
+        <i className="leftIcon fa-brands fa-square-github"></i>
       </div>
 
       <div className="centerNavbar">
-        <span>Home</span>
-        <span>About</span>
-        <span>Contact</span>
-        <span>Write</span>
-        <span>Logout</span>
+        <span>
+          <Link to="/" className="navlink">
+            Home{" "}
+          </Link>
+        </span>
+        <span>
+          {" "}
+          <Link to="/about" className="navlink">
+            About{" "}
+          </Link>
+        </span>
+        <span>
+          {" "}
+          <Link to="/contact" className="navlink">
+            Contact{" "}
+          </Link>
+        </span>
+        <span>
+          {" "}
+          <Link to="/writepost" className="navlink">
+            Write{" "}
+          </Link>
+        </span>
+        <span>
+          {" "}
+          <Link to="/logout" className="navlink">
+            Logout{" "}
+          </Link>
+        </span>
       </div>
       <div className="rightNavbar">
         <img
