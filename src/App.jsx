@@ -3,6 +3,7 @@ import { Header } from "./components/Header/Header";
 import { Nabar } from "./components/Navbar/Nabar";
 import { Home } from "./pages/Home/Home";
 import { Singlearticle } from "./pages/SingleArticle/Singlearticle";
+import { Write } from "./pages/Write/Write";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <Nabar />
 
       {/* <Home /> */}
-      <Singlearticle />
+      {/* <Singlearticle /> */}
+      <Write />
     </div>
   );
 }
