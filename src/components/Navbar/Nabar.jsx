@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 export const Nabar = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   return (
     <div className="navbarContainer">
       <div className="leftNavbar">
@@ -33,12 +34,30 @@ export const Nabar = () => {
             Write{" "}
           </Link>
         </span>
-        <span>
-          {" "}
-          <Link to="/logout" className="navlink">
-            Logout{" "}
-          </Link>
-        </span>
+
+        {isLoggedIn === "true" ? (
+          <span>
+            {" "}
+            <Link to="/logout" className="navlink">
+              Logout{" "}
+            </Link>
+          </span>
+        ) : (
+          <>
+            <span>
+              {" "}
+              <Link to="/login" className="navlink">
+                Login{" "}
+              </Link>
+            </span>
+            <span>
+              {" "}
+              <Link to="/register" className="navlink">
+                Register{" "}
+              </Link>
+            </span>
+          </>
+        )}
       </div>
       <div className="rightNavbar">
         <img
