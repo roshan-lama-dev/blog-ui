@@ -1,0 +1,47 @@
+.mainLogin {
+  background-color: teal;
+  overflow: hidden;
+}
+
+.loginForm {
+  height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginTitle {
+  font-size: 50px;
+}
+
+.emailInput {
+  margin-top: 10px;
+  /* font-size: 354px; */
+  padding: 25px;
+  font-size: 25px;
+  border: none;
+  outline: none;
+}
+.emailInput:focus {
+  border: none;
+}
+.passwordInput {
+  margin-top: 10px;
+  padding: 25px;
+  font-size: 25px;
+  border: none;
+  outline: none;
+}
+.loginBtn {
+  /* display: flex; */
+  /* width: max-content; */
+  padding: 25px 30px;
+  width: 350px;
+  border: none;
+  font-size: 25px;
+  background-color: aquamarine;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 10px;
+}
