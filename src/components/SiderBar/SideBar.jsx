@@ -29,10 +29,15 @@ export const SideBar = () => {
       </div>
 
       <div className="sidebarItem">
-        <span className="sidebarTitle">CATEGORIES</span>
+        <span className="sidebarTitle">FOLLOW ME</span>
         <div className="sidebarSocail">
-          <i class="fa-brands fa-linkedin"></i>
-          <i class="fa-brands fa-square-github"></i>
+          <a target="_blank" href="https://www.linkedin.com/in/roshan-lama/">
+            {" "}
+            <i className="sideIconf fa-brands fa-linkedin" />
+          </a>{" "}
+          <a target="_blank" href="https://github.com/roshan-lama-dev">
+            <i className="sideIcon fa-brands fa-square-github"></i>
+          </a>
         </div>
       </div>
     </div>

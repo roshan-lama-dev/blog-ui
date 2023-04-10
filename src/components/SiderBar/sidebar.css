@@ -25,7 +25,7 @@
   width: 80%;
   text-align: center;
   line-height: 50px;
-  font-size: 12px;
+  font-size: 20px;
   font-weight: 600;
   border-bottom: 1px solid black;
 }
@@ -43,7 +43,15 @@
 .sidebarSocail {
   display: flex;
   gap: 50px;
+  font-size: 30px;
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+}
+.sideIconf {
+  color: #0072b1;
+}
+
+.sideIcon {
+  color: #171515;
 }
