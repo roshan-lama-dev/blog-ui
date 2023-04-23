@@ -35,36 +35,35 @@ export const Nabar = () => {
           </Link>
         </span>
 
-        {isLoggedIn === "true" ? (
+        {isLoggedIn && (
           <span>
             {" "}
             <Link to="/logout" className="navlink">
               Logout{" "}
             </Link>
           </span>
+        )}
+      </div>
+      <div className="rightNavbar">
+        {isLoggedIn ? (
+          <img
+            className="profileImage"
+            src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+            alt="profile"
+          />
         ) : (
           <>
             <span>
-              {" "}
               <Link to="/login" className="navlink">
                 Login{" "}
               </Link>
             </span>
-            <span>
-              {" "}
-              <Link to="/register" className="navlink">
-                Register{" "}
-              </Link>
-            </span>
+            <Link to="/register" className="navlink">
+              Register{" "}
+            </Link>
           </>
         )}
-      </div>
-      <div className="rightNavbar">
-        <img
-          className="profileImage"
-          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-          alt="profile"
-        />
+
         <i class="fa-solid fa-magnifying-glass"></i>
       </div>
 

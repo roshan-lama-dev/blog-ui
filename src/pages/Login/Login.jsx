@@ -19,7 +19,7 @@ export const Login = () => {
           type="password"
           placeholder="*******"
         />
-        <button className="loginBtn" >Login</button>
+        <button className="loginBtn">Login</button>
       </form>
     </div>
   );

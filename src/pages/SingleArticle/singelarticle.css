@@ -1,3 +1,7 @@
 .single {
   display: flex;
+  flex-direction: column;
+}
+.flexContainer {
+  display: flex;
 }
