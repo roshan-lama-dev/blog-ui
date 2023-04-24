@@ -1,7 +1,7 @@
 import React from "react";
 import "./post.css";
 
-export const Post = () => {
+export const Post = ({ posts }) => {
   return (
     <div className="post">
       <div className="blogPost">
