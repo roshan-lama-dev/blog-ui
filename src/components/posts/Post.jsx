@@ -17,7 +17,7 @@ export const Post = ({ posts }) => {
             <span className="postCat">Life</span>
           </div>
 
-          <span className="postTitle">Exercise Daily</span>
+          <span className="postTitle">{}</span>
           <hr />
           <span className="postDate">2 hours ago</span>
         </div>
