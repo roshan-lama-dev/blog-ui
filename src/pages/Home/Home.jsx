@@ -21,7 +21,7 @@ export const Home = () => {
       <Header />
 
       <div className="home">
-        <Post posts={post} />
+        <Post post={post} />
         <SideBar />
       </div>
     </div>
