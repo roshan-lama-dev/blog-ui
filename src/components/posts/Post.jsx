@@ -16,13 +16,15 @@ export const Post = ({ post }) => {
 
             <div className="postInfo">
               <div className="postCats">
-                <span className="postCat"> {i.catergories}</span>
-                <span className="postCat">Life</span>
+                {i.categories.map((i) => {
+                  return <span className="postCat">{i}</span>;
+                })}
               </div>
 
               <span className="postTitle">{i.title}</span>
               <hr />
               <span className="postDate">
+                {/* converts the date created parameter from the database into readable format */}
                 {new Date(i.createdAt).toDateString()}
               </span>
             </div>
