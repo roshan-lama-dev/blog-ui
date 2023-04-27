@@ -1,7 +1,12 @@
 import React from "react";
 import "./singelpost.css";
 import { Nabar } from "../Navbar/Nabar";
+import { useLocation } from "react-router-dom";
 export const SinglePost = () => {
+  // using the location hook gives us the pathname where we have sent the post id
+  const location = useLocation();
+  // we are spliting the location returend from the uselocation to get the id which in the second position
+  console.log(location.pathname.split("/")[2]);
   return (
     <>
       {/* <Nabar /> */}

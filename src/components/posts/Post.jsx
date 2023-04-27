@@ -1,5 +1,6 @@
 import React from "react";
 import "./post.css";
+import { Link } from "react-router-dom";
 
 export const Post = ({ post }) => {
   console.log(post);
@@ -20,8 +21,11 @@ export const Post = ({ post }) => {
                   return <span className="postCat">{i}</span>;
                 })}
               </div>
+              {/* capture the post id and relocate the user to the single post filed when he clicks on the title */}
+              <Link className="navlink" to={`/post/${i._id}`}>
+                <span className="postTitle">{i.title}</span>
+              </Link>
 
-              <span className="postTitle">{i.title}</span>
               <hr />
               <span className="postDate">
                 {/* converts the date created parameter from the database into readable format */}
