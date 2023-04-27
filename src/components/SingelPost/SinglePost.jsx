@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./singelpost.css";
 import { Nabar } from "../Navbar/Nabar";
-import { useLocation } from "react-router-dom";
+import { useLocation } from "react-router";
+import axios from "axios";
+// import { set } from "mongoose";
 export const SinglePost = () => {
   // using the location hook gives us the pathname where we have sent the post id
   const location = useLocation();
   // we are spliting the location returend from the uselocation to get the id which in the second position
-  console.log(location.pathname.split("/")[2]);
+  const idPath = location.pathname.split("/")[2];
+  const [singlePost, setSinglePost] = useState({});
+  useEffect(() => {
+    const getSinglePost = async () => {
+      const result = await axios.get(
+        "http://localhost:8080/api/v1/posts/" + idPath
+      );
+      setSinglePost(result.data);
+    };
+
+    getSinglePost();
+  }, [idPath]);
   return (
     <>
       {/* <Nabar /> */}
@@ -19,7 +32,7 @@ export const SinglePost = () => {
           />
 
           <h1 className="singlePostTitle">
-            This is the first title for the post
+            {singlePost.title}
             <div className="singlePostEdit">
               <i className="singlePostIcon fa-solid fa-pen-to-square"></i>
               <i className="singlePostIcon fa-solid fa-trash"></i>
@@ -28,17 +41,15 @@ export const SinglePost = () => {
 
           <div className="singlePostInfo">
             <span className="singlePostAuthor">
-              Author: <b>Roshan</b>
+              Author: <b>{singlePost.userName}</b>
             </span>
 
-            <span className="singlePosttime">2 hours ago</span>
+            <span className="singlePosttime">
+              Created At: <b>{new Date(singlePost.createdAt).toDateString()}</b>
+            </span>
           </div>
 
-          <p className="postDesription">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia
-            sed, possimus voluptatibus culpa odio consectetur facere non enim?
-            Quibusdam, accusamus.
-          </p>
+          <p className="postDesription">{singlePost.desc}</p>
         </div>
       </div>
     </>
