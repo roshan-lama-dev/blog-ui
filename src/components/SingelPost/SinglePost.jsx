@@ -3,6 +3,7 @@ import "./singelpost.css";
 import { Nabar } from "../Navbar/Nabar";
 import { useLocation } from "react-router";
 import axios from "axios";
+import { Link } from "react-router-dom";
 // import { set } from "mongoose";
 export const SinglePost = () => {
   // using the location hook gives us the pathname where we have sent the post id
@@ -41,7 +42,10 @@ export const SinglePost = () => {
 
           <div className="singlePostInfo">
             <span className="singlePostAuthor">
-              Author: <b>{singlePost.userName}</b>
+              Author:
+              <Link className="navlink" to={`/?user=${singlePost.userName}`}>
+                <b>{singlePost.userName}</b>
+              </Link>
             </span>
 
             <span className="singlePosttime">
